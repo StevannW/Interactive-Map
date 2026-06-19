@@ -2,18 +2,14 @@
   "version": 2,
   "functions": {
     "api/index.php": {
-      "runtime": "php:8.3"
+      "runtime": "now-php@1.1.0"
     }
   },
   "routes": [
     {
-      "src": "/(.+?)/?$",
-      "dest": "/api/index.php"
-    },
-    {
-      "src": "/api/(.+?)/?$",
+      "src": "/(.*)$",
       "dest": "/api/index.php"
     }
   ],
-  "buildCommand": "composer install --no-dev && npm install && npm run build"
+  "buildCommand": "composer install --no-dev"
 }
